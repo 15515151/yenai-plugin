@@ -94,7 +94,7 @@ class Config {
 
     maege(userDoc.contents.items, defDoc.contents.items)
 
-    if (name !== "notice.yaml" && name !== "setu.yaml") {
+    if (name !== "notice.yaml") {
       markDeprecated(userDoc.contents.items, defDoc.contents.items)
     }
 
@@ -131,26 +131,6 @@ class Config {
   /** 代理 */
   get proxy() {
     return this.getDefOrConfig("proxy")
-  }
-
-  /** pixiv */
-  get pixiv() {
-    return this.getDefOrConfig("pixiv")
-  }
-
-  /** 哔咔 */
-  get bika() {
-    return this.getDefOrConfig("bika")
-  }
-
-  /** 搜图 */
-  get picSearch() {
-    return this.getDefOrConfig("picSearch")
-  }
-
-  /** setu */
-  get setu() {
-    return this.getDefOrConfig("setu")
   }
 
   /** 状态 */
@@ -280,12 +260,6 @@ class Config {
       let index = yaml.get(key).indexOf(value)
       yaml.delete(`${key}.${index}`)
     }
-  }
-
-  async change_pixiv() {
-    let pixiv = (await import("../model/index.js")).Pixiv
-    let PixivApi = (await import("../model/Pixiv/api.js")).default
-    pixiv._PixivClient = new PixivApi(this.pixiv.refresh_token)
   }
 }
 export default new Config()

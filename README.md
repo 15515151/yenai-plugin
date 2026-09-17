@@ -201,70 +201,6 @@ Tip：具体可使用 **#椰奶群管帮助** 查看
 </details>
 
 <details>
-  <summary>娱乐功能</summary>
-
-| 功能           | 指令                             | 描述               |
-| -------------- | -------------------------------- | ------------------ |
-| 随机唱鸭       | #唱歌                            |                    |
-| 支付宝到账语音 | #支付宝到账(金额)                |                    |
-| coser          | #coser                           |                    |
-| 有道翻译       | #((源语言-)?目标语言)?翻译(内容) |                    |
-| Github 略缩图  | github.com/用户名/仓库名         |                    |
-| acg 搜索       | #(类型)?acg(关键词)              | 类型可选：cos, acg |
-
-</details>
-
-<details>
-  <summary>Pixiv功能</summary>
-
-| 功能          | 指令                                    | 描述                   |
-| ------------- | --------------------------------------- | ---------------------- |
-| Pixiv 排行榜  | #看看(日期)?(类型)(全年龄)?榜(第 n 页)? | 类型可选：日, 周, 月等 |
-| Tag 搜图      | #tag(pro)?搜图(关键词)(第 n 页)?        |                        |
-| Pid 搜图      | #pid 搜图(插画 ID)                      |                        |
-| Uid 搜图      | #uid 搜图(用户 ID)(第 n 页)?            |                        |
-| 查看热门 Tag  | #查看热门 Tag                           |                        |
-| 查看相关作品  | #看相关作品(插画 ID)                    |                        |
-| 随机原创插画  | #来(n)张(好康的\| se图)                 |                        |
-| 推荐作品      | #来(n)张推荐图                          |                        |
-| 搜索用户      | #user 搜索(用户名)(第 n 页)?            |                        |
-| P 站单图      | #pximg(pro)?                            |                        |
-| 更换代理      | #pixiv 更换代理(代理地址)               |                        |
-| 开启/关闭直连 | #pixiv(开启\| 关闭)直连                 |                        |
-| 登录信息      | #pixiv 登录信息                         |                        |
-
-</details>
-
-<details>
-  <summary>搜图搜番</summary>
-
-| 功能                 | 指令                          | 描述                    |
-| -------------------- | ----------------------------- | ----------------------- |
-| SauceNAO 搜图        | #SauceNAO 搜图                | 使用 SauceNAO 进行搜图  |
-| WhatAnime 搜番       | #WhatAnime 搜番               | 使用 WhatAnime 进行搜番 |
-| Ascii2D 搜图         | #Ascii2D 搜图                 | 使用 Ascii2D 进行搜图   |
-| 设置 SauceNAO ApiKey | #设置 SauceNAOApiKey (ApiKey) | 设置 SauceNAO 的 ApiKey |
-
-</details>
-
-<details>
-  <summary>哔咔功能</summary>
-
-| 功能          | 指令                                              | 描述 |
-| ------------- | ------------------------------------------------- | ---- |
-| 哔咔搜索      | #哔咔(类别\|作者\| 高级)?搜索(关键词)(第 n 页)?   |      |
-| 哔咔看本子    | #哔咔 id(本子 ID)(第 n 页)?(第 n 话)?             |      |
-| 快速查看      | #哔咔看(编号)                                     |      |
-| 下一页        | #哔咔下一页                                       |      |
-| 下一话        | #哔咔下一话                                       |      |
-| 类别列表      | #哔咔类别列表                                     |      |
-| 漫画详情      | #哔咔(详情\| 细节)(本子 ID)                       |      |
-| 修改图片质量  | #哔咔修改图片质量(低质量\|中等质量\|高质量\|原图) |      |
-| 开启/关闭直连 | #哔咔(开启\| 关闭)直连                            |      |
-
-</details>
-
-<details>
   <summary>图片状态</summary>
 
 | 功能     | 指令                    | 描述         |
@@ -287,13 +223,7 @@ Tip：具体可使用 **#椰奶群管帮助** 查看
 ## 特别鸣谢 ❤️
 
 - [Yunzai-Bot](https://gitee.com/Le-niao/Yunzai-Bot)
-- [cq-picsearcher-bot](https://github.com/Tsuk1ko/cq-picsearcher-bot)
 - [nonebot-plugin-picstatus](https://github.com/lgc2333/nonebot-plugin-picstatus)
-- [HibiAPI](https://github.com/mixmoe/HibiAPI)
-- [SauceNAO](https://saucenao.com/)
-- [Ascii2D](https://ascii2d.net/)
-- [trace.moe](https://trace.moe) ([GitHub](https://github.com/soruly/trace.moe))
-- [vilipix](https://www.vilipix.com/)
 - [trss.me](https://trss.me)
 
 ### 贡献者 ✨

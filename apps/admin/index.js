@@ -101,12 +101,6 @@ export class Admin_Index extends plugin {
             value: "<div class=\"cfg-status\">>>></div>",
             hint: "#椰奶通知设置",
             desc: "通知设置页面"
-          },
-          {
-            key: "娱乐设置",
-            value: "<div class=\"cfg-status\">>>></div>",
-            hint: "#椰奶娱乐设置",
-            desc: "娱乐设置页面"
           }
         ]
       }
