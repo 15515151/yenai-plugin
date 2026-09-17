@@ -3,12 +3,7 @@ import fs from "fs"
 import _ from "lodash"
 import { Data } from "../components/index.js"
 import { puppeteer } from "../model/index.js"
-const helpType = {
-  群管: "gpAdmin"
-}
-const helpReg = new RegExp(
-  `^#?椰奶(插件)?(${Object.keys(helpType).join("|")})?(帮助|菜单|功能)$`
-)
+const helpReg = new RegExp("^#?椰奶(插件)?(帮助|菜单|功能)$")
 export class YenaiHelp extends plugin {
   constructor() {
     super({
@@ -36,18 +31,9 @@ export class YenaiHelp extends plugin {
 async function help(e) {
   let custom = {}
   // let help = {}
-  const special = e.msg.match(helpReg)[2]
-
-  let diyCfg, sysCfg
-  if (special) {
-    let gpAdminHelp = await Data.importCfg(helpType[special])
-    diyCfg = gpAdminHelp.diyCfg
-    sysCfg = gpAdminHelp.sysCfg
-  } else {
-    let indexHelp = await Data.importCfg("help")
-    diyCfg = indexHelp.diyCfg
-    sysCfg = indexHelp.sysCfg
-  }
+  let indexHelp = await Data.importCfg("help")
+  let diyCfg = indexHelp.diyCfg
+  let sysCfg = indexHelp.sysCfg
 
   // custom = help
 

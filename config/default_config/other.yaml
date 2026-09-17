@@ -2,3 +2,14 @@
 renderScale: 100
 #是否开启检测到默认配置文件更新自动合并用户配置文件
 autoMaegeCfg: true
+
+# 撤回消息权限
+# all: 所有人
+# admin: 管理员 + 群主 + 主人
+# owner: 群主 + 主人
+# master: 主人
+recallMsgPer:
+  # 撤回bot消息
+  bot: all
+  # 撤回群员消息
+  member: admin

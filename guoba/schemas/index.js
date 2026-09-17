@@ -5,12 +5,10 @@ import thumbUp from "./thumbUp.js"
 import state from "./state.js"
 import proxy from "./proxy.js"
 import other from "./other.js"
-import groupAdmin from "./groupAdmin.js"
 export const schemas = [
   ...notice,
   ...state,
   ...thumbUp,
-  ...groupAdmin,
   ...proxy,
   ...other
 ]
@@ -27,8 +25,7 @@ export function getConfigData() {
     other: Config.other,
     state: Config.state,
     proxy: Config.proxy,
-    thumbUp: Config.thumbUp,
-    groupAdmin: parseGroupAdmin()
+    thumbUp: Config.thumbUp
   }
 }
 function parseNoticeAlone() {
@@ -57,13 +54,6 @@ function parseNoticeAlone() {
   }
   return data
 }
-const parseGroupAdmin = () => {
-  const cfg = { ...Config.groupAdmin }
-  cfg.groupVerify.SuccessMsgs = Object.entries(cfg.groupVerify.SuccessMsgs)
-    .map(([ groupId, msg ]) => ({ groupId, msg }))
-  return cfg
-}
-
 export function setConfigData(data, { Result }) {
   data = preprocessData(data)
   const dataMap = convertToNestedObject(data)
@@ -73,9 +63,6 @@ export function setConfigData(data, { Result }) {
     y.setData(dataMap[key])
     if (key == "notice") {
       removeExcessAlone(y, dataMap.notice)
-    }
-    if (key == "groupAdmin") {
-      removeExcessAlone(y, dataMap.groupAdmin, "groupVerify.SuccessMsgs")
     }
   }
   return Result.ok({}, "保存成功辣ε(*´･ω･)з")
@@ -118,13 +105,6 @@ function convertToNestedObject(data) {
 }
 
 function preprocessData(data) {
-  const SuccessMsgs = data["groupAdmin.groupVerify.SuccessMsgs"]
-  if (SuccessMsgs?.length) {
-    data["groupAdmin.groupVerify.SuccessMsgs"] = SuccessMsgs.reduce((r, i) => {
-      r[YamlReader.CONFIG_INTEGER_KEY + i.groupId] = i.msg
-      return r
-    }, {})
-  }
   const noticeGroupAlone = data["notice.groupAlone"]
   if (noticeGroupAlone?.length) {
     noticeGroupAlone.forEach(e => {

@@ -438,7 +438,7 @@ export class Assistant extends plugin {
     let sender = source.sender.user_id
     const isBotMsg = sender == this.Bot.uin
     if (e.isGroup) {
-      const { bot, member } = Config.groupAdmin.recallMsgPer
+      const { bot, member } = Config.other.recallMsgPer
       const per = isBotMsg ? bot : member
       /** 群聊判断权限 */
       if (!common.checkPermission(e, per)) {

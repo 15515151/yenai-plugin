@@ -223,11 +223,6 @@ export const helpList = [
         desc: "查看椰奶设置"
       },
       {
-        icon: 9,
-        title: "#投票设置",
-        desc: "设置投票参数"
-      },
-      {
         icon: 1,
         title: "#椰奶(强制)更新",
         desc: "更新椰奶"
@@ -245,10 +240,6 @@ export const helpList = [
         icon: 8,
         title: "#椰奶状态(pro)?",
         desc: "查看系统状态"
-      }, {
-        icon: 3,
-        title: "#椰奶群管帮助",
-        desc: "群管帮助"
       }, {
         icon: 12,
         title: "#椰奶(启|禁)用全部通知",

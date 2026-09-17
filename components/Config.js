@@ -138,11 +138,6 @@ class Config {
     return this.getDefOrConfig("state")
   }
 
-  /** 群管 */
-  get groupAdmin() {
-    return this.getDefOrConfig("groupAdmin")
-  }
-
   /**
    * 默认配置和用户配置
    * @param name
